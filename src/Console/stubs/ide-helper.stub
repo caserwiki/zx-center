@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * A helper file for Zx Center, to provide autocomplete information to your IDE
+ *
+ * This file should not be included in your code, only analyzed by your IDE!
+ *
+ * @author zx <leowiki@foxmail.com>
+ */
+namespace Zx\Admin {
+    use Illuminate\Support\Collection;
+
+    /**
+     {grid}
+     */
+    class Grid {}
+
+    class MiniGrid extends Grid {}
+
+    /**
+     {show}
+     */
+    class Show {}
+
+    /**
+     {form}
+     */
+    class Form {}
+
+}
+
+namespace Zx\Admin\Grid {
+    /**
+     {grid-column}
+     */
+    class Column {}
+
+    /**
+     {grid-filter}
+     */
+    class Filter {}
+}
+
+namespace Zx\Admin\Show {
+    /**
+     {show-column}
+     */
+    class Field {}
+}

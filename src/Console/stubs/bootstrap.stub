@@ -1,0 +1,26 @@
+<?php
+
+use Zx\Admin\Admin;
+use Zx\Admin\Grid;
+use Zx\Admin\Form;
+use Zx\Admin\Grid\Filter;
+use Zx\Admin\Show;
+
+/**
+ * Zx-center - admin builder based on Laravel.
+ * @author zx <https://github.com/caserwiki>
+ *
+ * Bootstraper for Admin.
+ *
+ * Here you can remove builtin form field:
+ *
+ * extend custom field:
+ * Zx\Admin\Form::extend('php', PHPEditor::class);
+ * Zx\Admin\Grid\Column::extend('php', PHPEditor::class);
+ * Zx\Admin\Grid\Filter::extend('php', PHPEditor::class);
+ *
+ * Or require js and css assets:
+ * Admin::css('/packages/prettydocs/css/styles.css');
+ * Admin::js('/packages/prettydocs/js/main.js');
+ *
+ */

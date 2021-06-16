@@ -1,0 +1,32 @@
+{
+    "name": "{package}",
+    "alias": "{alias}",
+    "description": "Description...",
+    "type": "library",
+    "keywords": ["zx-center", "extension"],
+    "homepage": "https://github.com/{package}",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "your name",
+            "email": "your email"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "zx/laravel-admin": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "{namespace}": "src/"
+        }
+    },
+    "extra": {
+        "zx-center": "{namespace}{className}ServiceProvider",
+        "laravel": {
+            "providers": [
+                "{namespace}{className}ServiceProvider"
+            ]
+        }
+    }
+}
