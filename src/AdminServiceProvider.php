@@ -13,6 +13,7 @@ use Zx\Admin\Layout\Menu;
 use Zx\Admin\Layout\Navbar;
 use Zx\Admin\Layout\SectionManager;
 use Zx\Admin\Support\Context;
+use Zx\Admin\Support\Helper;
 use Zx\Admin\Support\Setting;
 use Zx\Admin\Support\Translator;
 use Zx\Admin\Support\WebUploader;
@@ -274,8 +275,8 @@ PHP;
 
         // register middleware group.
         foreach ($this->middlewareGroups as $key => $middleware) {
-            if ($disablePermission && $middleware == 'admin.permission') {
-                continue;
+            if ($disablePermission) {
+                Helper::deleteByValue($middleware, 'admin.permission', true);
             }
             $router->middlewareGroup($key, $middleware);
         }
