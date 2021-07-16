@@ -4,7 +4,7 @@ namespace Zx\Admin\Layout;
 
 use Zx\Admin\Admin;
 use Zx\Admin\Support\Helper;
-use Lang;
+use Illuminate\Support\Facades\Lang;
 
 class Menu
 {
