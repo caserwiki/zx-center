@@ -14,7 +14,7 @@
                class="nav-link {!! $builder->isActive($item) ? 'active' : '' !!}">
                 {!! str_repeat('&nbsp;', $depth) !!}<i class="fa fa-fw {{ $item['icon'] ?: $defaultIcon }}"></i>
                 <p>
-                    {{ $builder->translate($item['title']) }}
+                    {!! $builder->translate($item['title']) !!}
                 </p>
             </a>
         </li>
@@ -26,7 +26,7 @@
                     {{ $horizontal ? 'dropdown-toggle' : '' }}">
                 {!! str_repeat('&nbsp;', $depth) !!}<i class="fa fa-fw {{ $item['icon'] ?: $defaultIcon }}"></i>
                 <p>
-                    {{ $builder->translate($item['title']) }}
+                    {!! $builder->translate($item['title']) !!}
 
                     @if(! $horizontal)
                         <i class="right fa fa-angle-left"></i>
