@@ -1,3 +1,6 @@
+<style>
+    .dark-mode .dropdown-menu {background:#2c2c43 !important;}
+</style>
 @if(! empty($button['text']) || $click)
     <span class="drop{{ $direction }}" style="display:inline-block">
         <a id="{{ $buttonId }}" class="dropdown-toggle {{ $button['class'] }}" data-toggle="dropdown" href="javascript:void(0)">
