@@ -95,6 +95,8 @@ function listen(Zx) {
         new Footer(Zx);
         // data-action 动作绑定(包括删除、批量删除等操作)
         new DataActions(Zx);
+        // pjax初始化功能
+        new Pjax(Zx);
     });
 
     // 每个请求都初始化
@@ -107,9 +109,6 @@ function listen(Zx) {
                 'X-CSRF-TOKEN': Zx.token
             }
         });
-
-        // pjax初始化功能
-        new Pjax(Zx);
     });
 }
 
