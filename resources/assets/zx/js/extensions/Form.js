@@ -141,6 +141,11 @@ class Form {
                         key;
 
                     if (response.status != 422 || ! error || ! Zx.helpers.isset(error, 'errors')) {
+                        let json = response.responseJSON;
+                        if (json && json.message) {
+                            return Zx.error(json.message);
+                        }
+
                         return Zx.error(response.status + ' ' + response.statusText);
                     }
                     error = error.errors;
