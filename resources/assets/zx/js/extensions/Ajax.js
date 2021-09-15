@@ -92,6 +92,9 @@ export default class Ajax {
                     } catch (e) {}
                     return;
                 }
+                break;
+            case 0:
+                return;
         }
 
         Zx.error(_msg || (xhr.status + ' ' + msg));
