@@ -5,9 +5,8 @@ namespace Zx\Admin\Scaffold;
 trait GridCreator
 {
     /**
-     * @param string $primaryKey
-     * @param array  $fields
-     *
+     * @param  string  $primaryKey
+     * @param  array  $fields
      * @return string
      */
     protected function generateGrid(string $primaryKey = null, array $fields = [], $timestamps = null)

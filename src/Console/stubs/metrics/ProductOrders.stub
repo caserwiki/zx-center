@@ -27,8 +27,7 @@ class ProductOrders extends Round
     /**
      * 处理请求
      *
-     * @param Request $request
-     *
+     * @param  Request  $request
      * @return mixed|void
      */
     public function handle(Request $request)
@@ -53,8 +52,7 @@ class ProductOrders extends Round
     /**
      * 设置图表数据.
      *
-     * @param array $data
-     *
+     * @param  array  $data
      * @return $this
      */
     public function withChart(array $data)
@@ -67,10 +65,9 @@ class ProductOrders extends Round
     /**
      * 卡片内容.
      *
-     * @param int $finished
-     * @param int $pending
-     * @param int $rejected
-     *
+     * @param  int  $finished
+     * @param  int  $pending
+     * @param  int  $rejected
      * @return $this
      */
     public function withContent($finished, $pending, $rejected)

@@ -8,8 +8,7 @@ use Illuminate\Http\Request;
 class ValueController
 {
     /**
-     * @param Request $request
-     *
+     * @param  Request  $request
      * @return mixed
      */
     public function handle(Request $request)
@@ -32,11 +31,10 @@ class ValueController
     }
 
     /**
-     * @param Request $request
+     * @param  Request  $request
+     * @return \Zx\Admin\Traits\InteractsWithApi
      *
      * @throws Exception
-     *
-     * @return \Zx\Admin\Traits\InteractsWithApi
      */
     protected function resolve(Request $request)
     {

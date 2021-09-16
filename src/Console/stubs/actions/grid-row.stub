@@ -19,8 +19,7 @@ class DummyClass extends RowAction
     /**
      * Handle the action request.
      *
-     * @param Request $request
-     *
+     * @param  Request  $request
      * @return Response
      */
     public function handle(Request $request)
@@ -41,8 +40,7 @@ class DummyClass extends RowAction
 	}
 
     /**
-     * @param Model|Authenticatable|HasPermissions|null $user
-     *
+     * @param  Model|Authenticatable|HasPermissions|null  $user
      * @return bool
      */
     protected function authorize($user): bool

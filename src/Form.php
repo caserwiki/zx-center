@@ -349,7 +349,7 @@ class Form implements Renderable
     }
 
     /**
-     * @param $column
+     * @param  $column
      * @return $this
      */
     public function removeField($column)
@@ -502,7 +502,7 @@ class Form implements Renderable
     /**
      * Generate a edit form.
      *
-     * @param $id
+     * @param  $id
      * @return $this
      */
     public function edit($id)
@@ -538,7 +538,7 @@ class Form implements Renderable
     /**
      * Destroy data entity and remove files.
      *
-     * @param $id
+     * @param  $id
      * @return mixed
      */
     public function destroy($id)
@@ -774,7 +774,7 @@ class Form implements Renderable
     /**
      * Handle update.
      *
-     * @param $id
+     * @param  $id
      * @param  array|null  $data
      * @param  string|null  $redirectTo
      * @return \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse||Response
@@ -917,8 +917,8 @@ class Form implements Renderable
     }
 
     /**
-     * @param $key
-     * @param $redirectTo
+     * @param  $key
+     * @param  $redirectTo
      * @return string|null
      */
     public function getRedirectUrl($key, $redirectTo = null)
@@ -1019,7 +1019,7 @@ class Form implements Renderable
     /**
      * Prepare input data for insert.
      *
-     * @param $inserts
+     * @param  $inserts
      * @return array
      */
     public function prepareInsert($inserts)
@@ -1060,7 +1060,7 @@ class Form implements Renderable
     }
 
     /**
-     * @param $keys
+     * @param  $keys
      * @return $this
      */
     public function forgetIgnored($keys)

@@ -38,7 +38,7 @@ class Helper
     /**
      * 把给定的值转化为数组.
      *
-     * @param $value
+     * @param  $value
      * @param  bool  $filter
      * @return array
      */
@@ -623,8 +623,8 @@ class Helper
     /**
      * 判断两个值是否相等.
      *
-     * @param $value1
-     * @param $value2
+     * @param  $value1
+     * @param  $value2
      * @return bool
      */
     public static function equal($value1, $value2)
@@ -779,7 +779,7 @@ class Helper
      * @param  mixed  $model
      * @param  string  $column
      * @param  string  $query
-     * @param mixed array $params
+     * @param  mixed  array  $params
      * @return void
      */
     public static function withQueryCondition($model, ?string $column, string $query, array $params)

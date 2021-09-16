@@ -9,8 +9,7 @@ class DummyClass extends Form
     /**
      * Handle the form request.
      *
-     * @param array $input
-     *
+     * @param  array  $data
      * @return mixed
      */
     public function handle(array $input)

@@ -24,8 +24,8 @@ class Column implements Renderable
     /**
      * Column constructor.
      *
-     * @param $content
-     * @param int $width
+     * @param  $content
+     * @param  int  $width
      */
     public function __construct($content, $width = 12)
     {
@@ -58,8 +58,7 @@ class Column implements Renderable
     /**
      * Append content to column.
      *
-     * @param $content
-     *
+     * @param  $content
      * @return $this
      */
     public function append($content)
@@ -72,8 +71,7 @@ class Column implements Renderable
     /**
      * Add a row for column.
      *
-     * @param $content
-     *
+     * @param  $content
      * @return Column
      */
     public function row($content)

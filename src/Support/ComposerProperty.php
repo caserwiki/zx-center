@@ -35,9 +35,8 @@ class ComposerProperty implements Arrayable
     }
 
     /**
-     * @param $key
-     * @param null $default
-     *
+     * @param  $key
+     * @param  null $default
      * @return mixed
      */
     public function get($key, $default = null)
@@ -46,8 +45,8 @@ class ComposerProperty implements Arrayable
     }
 
     /**
-     * @param $key
-     * @param $val
+     * @param  $key
+     * @param  $val
      *
      * @return $this
      */
@@ -61,7 +60,7 @@ class ComposerProperty implements Arrayable
     }
 
     /**
-     * @param $key
+     * @param  $key
      *
      * @return $this
      */
@@ -75,7 +74,7 @@ class ComposerProperty implements Arrayable
     }
 
     /**
-     * @param $name
+     * @param  $name
      *
      * @return mixed
      */

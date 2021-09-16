@@ -57,7 +57,6 @@ class Tree extends Component
      *
      * @param Browser $browser
      * @param mixed   $values
-     *
      * @return Browser
      */
     public function choose(Browser $browser, $values)
@@ -92,7 +91,6 @@ JS
      * 选中所有.
      *
      * @param Browser $browser
-     *
      * @return Browser
      */
     public function checkAll(Browser $browser)
@@ -109,7 +107,6 @@ JS
      * 取消选中所有.
      *
      * @param Browser $browser
-     *
      * @return Browser
      */
     public function unCheckAll(Browser $browser)
@@ -124,7 +121,6 @@ JS
 
     /**
      * @param \Laravel\Dusk\Browser $browser
-     *
      * @return string
      */
     protected function getTreeSelector(Browser $browser)

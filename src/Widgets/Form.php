@@ -718,7 +718,7 @@ HTML;
     }
 
     /**
-     * @param $id
+     * @param  $id
      * @return $this
      */
     public function setFormId($id)

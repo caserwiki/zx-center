@@ -38,7 +38,7 @@ abstract class Presenter
     /**
      * Set parent filter.
      *
-     * @param AbstractFilter $filter
+     * @param  AbstractFilter  $filter
      */
     public function setParent(AbstractFilter $filter)
     {
@@ -50,8 +50,7 @@ abstract class Presenter
     }
 
     /**
-     * @param int $width
-     *
+     * @param  int  $width
      * @return $this
      */
     public function width($width)
@@ -84,8 +83,7 @@ abstract class Presenter
     /**
      * Set default value for filter.
      *
-     * @param $default
-     *
+     * @param  $default
      * @return $this
      */
     public function default($default)

@@ -109,8 +109,8 @@ class MinifyCommand extends Command
     /**
      * 替换文件.
      *
-     * @param $name
-     * @param $color
+     * @param  $name
+     * @param  $color
      */
     protected function replaceFiles($name, $color)
     {
@@ -216,8 +216,7 @@ class MinifyCommand extends Command
     /**
      * 获取颜色.
      *
-     * @param string $name
-     *
+     * @param  string  $name
      * @return string
      */
     protected function getColor($name)
@@ -246,8 +245,7 @@ class MinifyCommand extends Command
     }
 
     /**
-     * @param string $color
-     *
+     * @param  string  $color
      * @return string
      */
     protected function formatColor($color)
@@ -262,8 +260,8 @@ class MinifyCommand extends Command
     /**
      * 执行命令.
      *
-     * @param string $command
-     * @param int    $timeout
+     * @param  string  $command
+     * @param  int  $timeout
      */
     protected function runProcess($command, $timeout = 1800)
     {
