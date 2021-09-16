@@ -393,11 +393,29 @@ class Column
     }
 
     /**
+     * @param  mixed  $value
+     * @return void
+     */
+    public function setOriginal($value)
+    {
+        $this->original = $value;
+    }
+
+    /**
      * @return mixed
      */
     public function getValue()
     {
         return $this->value;
+    }
+
+    /**
+     * @param  mixed  $value
+     * @return void
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
     }
 
     /**
@@ -540,9 +558,9 @@ class Column
                 $row['#'] = $i;
             }
 
-            $this->original = Arr::get($this->originalModel, $this->name);
+            $this->setOriginal(Arr::get($this->originalModel, $this->name));
 
-            $this->value = $value = $this->htmlEntityEncode($original = Arr::get($row, $this->name));
+            $this->setValue($value = $this->htmlEntityEncode($original = Arr::get($row, $this->name)));
 
             if ($original === null) {
                 $original = (string) $original;
@@ -558,7 +576,7 @@ class Column
                 Helper::arraySet($row, $this->name, $value);
             }
 
-            $this->value = $value ?? null;
+            $this->setValue($value ?? null);
 
             return $row;
         });
