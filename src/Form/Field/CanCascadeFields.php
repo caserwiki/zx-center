@@ -107,7 +107,11 @@ trait CanCascadeFields
             'has' => '8',
         ];
 
-        return sprintf('cascade-%s-%s-%s', str_replace(' ', '-', $this->getElementClassString()), $value, $map[$operator]);
+        return str_replace(
+            '.',
+            '',
+            sprintf('cascade-%s-%s-%s', str_replace(' ', '-', $this->getElementClassString()), $value, $map[$operator])
+        );
     }
 
     protected function addCascadeScript()
