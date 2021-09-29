@@ -476,7 +476,6 @@ class Column
 
     /**
      * @param  array  $callbacks
-     *
      * @return void
      */
     public function setDisplayCallbacks(array $callbacks)
