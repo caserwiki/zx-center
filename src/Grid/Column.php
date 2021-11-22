@@ -205,8 +205,8 @@ class Column
     /**
      * Extend column displayer.
      *
-     * @param  $name
-     * @param  $displayer
+     * @param $name
+     * @param $displayer
      */
     public static function extend($name, $displayer)
     {

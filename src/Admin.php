@@ -31,7 +31,7 @@ class Admin
     use HasAssets;
     use HasHtml;
 
-    const VERSION = '1.1.0';
+    const VERSION = '1.1.1-beta';
 
     const SECTION = [
         // 往 <head> 标签内输入内容
@@ -455,6 +455,7 @@ class Admin
      * 响应并中断后续逻辑.
      *
      * @param  Response|string|array  $response
+     *
      * @throws HttpResponseException
      */
     public static function exit($response = '')

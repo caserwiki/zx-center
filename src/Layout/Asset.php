@@ -177,6 +177,9 @@ class Asset
         '@sortable' => [
             'js' => '@admin/zx/plugins/sortable/Sortable.min.js',
         ],
+        '@autocomplete' => [
+            'js' => '@admin/zx/plugins/autocomplete/jquery.autocomplete.min.js',
+        ],
     ];
 
     /**

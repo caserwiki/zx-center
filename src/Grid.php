@@ -660,6 +660,19 @@ class Grid
     }
 
     /**
+     * 显示横轴滚动条.
+     *
+     * @param  bool  $value
+     * @return $this
+     */
+    public function scrollbar(bool $value = true)
+    {
+        $this->options['table_scrollbar'] = $value;
+
+        return $this;
+    }
+
+    /**
      * Set grid header.
      *
      * @param  Closure|string|Renderable  $content
@@ -1069,8 +1082,8 @@ JS
     /**
      * Dynamically add columns to the grid view.
      *
-     * @param  $method
-     * @param  $arguments
+     * @param $method
+     * @param $arguments
      * @return Column
      */
     public function __call($method, $arguments)

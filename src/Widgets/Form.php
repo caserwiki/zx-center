@@ -11,6 +11,7 @@ use Zx\Admin\Form\Concerns\HasLayout;
 use Zx\Admin\Form\Concerns\HasRows;
 use Zx\Admin\Form\Concerns\HasTabs;
 use Zx\Admin\Form\Field;
+use Zx\Admin\Form\ResolveField;
 use Zx\Admin\Support\Helper;
 use Zx\Admin\Traits\HasAuthorization;
 use Zx\Admin\Traits\HasFormResponse;
@@ -63,7 +64,7 @@ use Illuminate\Validation\Validator;
  * @method Field\Html html($html, $label = '')
  * @method Field\Tags tags($column, $label = '')
  * @method Field\Icon icon($column, $label = '')
- * @method Field\Embeds embeds($column, $label = '')
+ * @method Field\Embeds embeds($column, $label = '', $callback = null)
  * @method Field\Captcha captcha($column, $label = '')
  * @method Field\Listbox listbox($column, $label = '')
  * @method Field\File file($column, $label = '')
@@ -718,7 +719,7 @@ HTML;
     }
 
     /**
-     * @param  $id
+     * @param $id
      * @return $this
      */
     public function setFormId($id)
