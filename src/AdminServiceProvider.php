@@ -169,7 +169,7 @@ class AdminServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([__DIR__.'/../config' => config_path()], 'zx-center-config');
-            $this->publishes([__DIR__.'/../resources/lang' => resource_path('lang')], 'zx-center-lang');
+            $this->publishes([__DIR__.'/../resources/lang' => $this->app->langPath()], 'zx-center-lang');
             $this->publishes([__DIR__.'/../database/migrations' => database_path('migrations')], 'zx-center-migrations');
             $this->publishes([__DIR__.'/../resources/dist' => public_path(Admin::asset()->getRealPath('@admin'))], 'zx-center-assets');
         }

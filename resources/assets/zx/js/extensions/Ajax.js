@@ -74,10 +74,17 @@ export default class Ajax {
             case 403:
                 return Zx.error(_msg || (Zx.lang['403'] || 'Permission deny!'));
             case 401:
-                if (json.login) {
-                    return location.href = json.login;
+                if (json.redirect) {
+                    return location.href = json.redirect;
                 }
                 return Zx.error(Zx.lang['401'] || 'Unauthorized.');
+            case 301:
+            case 302:
+                console.log('admin redirect', json);
+                if (json.redirect) {
+                    return location.href = json.redirect;
+                }
+                return;
             case 419:
                 return Zx.error(Zx.lang['419'] || 'Sorry, your page has expired.');
 

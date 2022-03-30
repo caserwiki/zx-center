@@ -114,7 +114,7 @@ class SelectTable extends Field
                 return [];
             }
 
-            return $model::find($v)->pluck($text, $id);
+            return $model::whereIn($id, Helper::array($v))->pluck($text, $id);
         });
     }
 

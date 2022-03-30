@@ -20,7 +20,6 @@ JS;
 
     public function display($limit = 100, $end = '...')
     {
-        $initial = $this->value;
         $this->value = Helper::htmlEntityEncode($this->value);
 
         // 数组
@@ -53,7 +52,7 @@ JS;
     &nbsp;<a href="javascript:void(0);" class="limit-more">&nbsp;<i class="fa fa-angle-double-down"></i></a>
 </div>
 <div class="limit-text d-none">
-    <span class="text">{$initial}</span>
+    <span class="text">{$this->value}</span>
     &nbsp;<a href="javascript:void(0);" class="limit-more">&nbsp;<i class="fa fa-angle-double-up"></i></a>
 </div>
 HTML;

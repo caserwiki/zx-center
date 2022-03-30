@@ -1,8 +1,8 @@
 
-import Helper from './Grid/Helper';
-import Tree from './Grid/Tree';
-import Orderable from './Grid/Orderable';
-import AsyncTable from './Grid/AsyncTable';
+import Helper from './Grid/Helper'
+import Tree from './Grid/Tree'
+import Orderable from './Grid/Orderable'
+import AsyncTable from './Grid/AsyncTable'
 
 (function (w, $) {
     let Zx = w.Zx,

@@ -13,6 +13,7 @@ use Zx\Admin\Grid\Filter\Date;
 use Zx\Admin\Grid\Filter\Day;
 use Zx\Admin\Grid\Filter\EndWith;
 use Zx\Admin\Grid\Filter\Equal;
+use Zx\Admin\Grid\Filter\FindInSet;
 use Zx\Admin\Grid\Filter\Group;
 use Zx\Admin\Grid\Filter\Gt;
 use Zx\Admin\Grid\Filter\Hidden;
@@ -66,6 +67,7 @@ use Illuminate\Support\Traits\Macroable;
  * @method Hidden hidden($name, $value)
  * @method Group group($column, $builder = null, $label = '')
  * @method Newline newline()
+ * @method FindInSet findInSet($column, $label = '')
  */
 class Filter implements Renderable
 {
@@ -107,6 +109,7 @@ class Filter implements Renderable
         'year'         => Year::class,
         'hidden'       => Hidden::class,
         'newline'      => Newline::class,
+        'findInSet'    => FindInSet::class,
     ];
 
     /**

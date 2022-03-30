@@ -4,7 +4,7 @@
   Description: Zx Center JS脚本.
   ----------------------------------------------------------------------------------------
   Item Name: Zx Center
-  Author: Jqh
+  Author: Zx
   Author URL: https://github.com/caserwiki
 ==========================================================================================*/
 
@@ -109,6 +109,8 @@ function listen(Zx) {
                 'X-CSRF-TOKEN': Zx.token
             }
         });
+        // pjax初始化功能
+        new Pjax(Zx);
     });
 }
 

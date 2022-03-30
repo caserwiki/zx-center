@@ -29,7 +29,7 @@
 </ul>
 
 <div class="box-footer text-center">
-    <a href="https://github.com/jqhph/zx-center#%E6%89%A9%E5%B1%95" target="_blank" class="uppercase">View All Extensions</a>
+    <a href="https://github.com/caserwiki/zx-center#%E6%89%A9%E5%B1%95" target="_blank" class="uppercase">View All Extensions</a>
 </div>
 
 <script>Zx.ready(function () {
@@ -37,7 +37,7 @@
     // $box.loading();
     //
     // $.ajax({
-    //     url: 'https://jqhph.github.io/zx-center/extra/extensions.html',
+    //     url: 'https://caserwiki.github.io/zx-center/extra/extensions.html',
     //     success: function (response) {
     //         $box.loading(false);
     //

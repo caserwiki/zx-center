@@ -15,7 +15,6 @@ class Menu
             'icon'      => 'fa fa-keyboard-o',
             'uri'       => '',
             'parent_id' => 0,
-            'permission_id' => 2,
         ],
         [
             'id'        => 2,
@@ -23,7 +22,6 @@ class Menu
             'icon'      => '',
             'uri'       => 'auth/extensions',
             'parent_id' => 1,
-            'permission_id' => 2,
         ],
         [
             'id'        => 3,
@@ -31,7 +29,6 @@ class Menu
             'icon'      => '',
             'uri'       => 'helpers/scaffold',
             'parent_id' => 1,
-            'permission_id' => 2,
         ],
         [
             'id'        => 4,
@@ -39,7 +36,6 @@ class Menu
             'icon'      => '',
             'uri'       => 'helpers/icons',
             'parent_id' => 1,
-            'permission_id' => 2,
         ],
     ];
 

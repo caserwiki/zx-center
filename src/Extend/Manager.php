@@ -5,7 +5,6 @@ namespace Zx\Admin\Extend;
 use Zx\Admin\Admin;
 use Zx\Admin\Exception\AdminException;
 use Zx\Admin\Exception\RuntimeException;
-use Zx\Admin\Models\Extension;
 use Zx\Admin\Models\Extension as ExtensionModel;
 use Zx\Admin\Support\Composer;
 use Zx\Admin\Support\Helper;
@@ -97,7 +96,7 @@ class Manager
     {
         $name = $this->getName($name);
 
-        $extension = Extension::where('name', $name)->first();
+        $extension = ExtensionModel::where('name', $name)->first();
 
         if (! $extension) {
             throw new RuntimeException(sprintf('Please install the extension(%s) first!', $name));

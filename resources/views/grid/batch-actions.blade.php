@@ -20,7 +20,7 @@
 @endif
 
 <script>
-    Zx.init('.{{ $parent->getRowName() }}-checkbox', function ($this) {
+Zx.init('.{{ $parent->getRowName() }}-checkbox', function ($this) {
     $this.on('change', function () {
         var btn = $('.{{ $selectAllName }}-btn'), selected = Zx.grid.selectedRows('{{ $parent->getName() }}').length;
 

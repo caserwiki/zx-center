@@ -6,6 +6,7 @@ use Zx\Admin\Admin;
 use Zx\Admin\Exception\RuntimeException;
 use Zx\Admin\Support\ComposerProperty;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Symfony\Component\Console\Output\NullOutput;
 
@@ -386,7 +387,7 @@ abstract class ServiceProvider extends LaravelServiceProvider
     /**
      * 注册路由.
      *
-     * @param  $callback
+     * @param $callback
      */
     public function registerRoutes($callback)
     {
@@ -566,6 +567,10 @@ abstract class ServiceProvider extends LaravelServiceProvider
     {
         if (is_array($files)) {
             return array_map([$this, 'formatAssetFiles'], $files);
+        }
+
+        if (URL::isValidUrl($files)) {
+            return $files;
         }
 
         return '@'.$this->getName().'.path/'.trim($files, '/');

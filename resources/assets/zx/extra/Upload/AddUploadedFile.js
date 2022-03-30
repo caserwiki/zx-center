@@ -115,7 +115,7 @@ export default class AddUploadedFile {
         html.find('[data-file-act="preview"]').click(function () {
             var url = $(this).data('url');
 
-            Dcat.helpers.previewImage(url);
+            Zx.helpers.previewImage(url);
         });
 
         parent.formFiles[file.serverId] = file;
@@ -164,7 +164,7 @@ export default class AddUploadedFile {
         parent.status.switch('decrOriginalFileNum');
         parent.status.switch('incrFileNumLimit');
 
-        if (! Dcat.helpers.len(parent.formFiles) && ! Dcat.helpers.len(parent.percentages)) {
+        if (! Zx.helpers.len(parent.formFiles) && ! Zx.helpers.len(parent.percentages)) {
             parent.status.switch('pending');
         }
     }

@@ -4,6 +4,7 @@ use Zx\Admin\Admin;
 use Zx\Admin\Support\Helper;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Http\Request;
 use Illuminate\Support\MessageBag;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -171,7 +172,7 @@ if (! function_exists('admin_trans_label')) {
      *
      * @param  $label
      * @param  array  $replace
-     * @param  null  $locale
+     * @param  null   $locale
      * @return array|\Illuminate\Contracts\Translation\Translator|null|string
      */
     function admin_trans_label($label = null, $replace = [], $locale = null)
@@ -186,7 +187,7 @@ if (! function_exists('admin_trans_option')) {
      *
      * @param  $field
      * @param  array  $replace
-     * @param  null  $locale
+     * @param  null   $locale
      * @return array|\Illuminate\Contracts\Translation\Translator|null|string
      */
     function admin_trans_option($optionValue, $field, $replace = [], $locale = null)
@@ -553,5 +554,42 @@ if (! function_exists('admin_exit')) {
     function admin_exit($response = '')
     {
         Admin::exit($response);
+    }
+}
+
+if (! function_exists('admin_redirect')) {
+    /**
+     * 跳转.
+     *
+     * @param  string  $to
+     * @param  int     $statusCode
+     * @param  Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Routing\Redirector
+     */
+    function admin_redirect($to, int $statusCode = 302, Request $request = null)
+    {
+        return Helper::redirect($to, $statusCode, $request);
+    }
+}
+
+if (! function_exists('format_byte')) {
+    /**
+     * 文件单位换算.
+     *
+     * @param  $input
+     * @param  int $dec
+     * @return string
+     */
+    function format_byte($input, $dec = 0)
+    {
+        $prefix_arr = ['B', 'KB', 'MB', 'GB', 'TB'];
+        $value = round($input, $dec);
+        $i = 0;
+        while ($value > 1024) {
+            $value /= 1024;
+            $i++;
+        }
+
+        return round($value, $dec).$prefix_arr[$i];
     }
 }

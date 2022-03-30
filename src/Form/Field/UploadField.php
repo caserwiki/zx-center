@@ -98,7 +98,7 @@ trait UploadField
      */
     public function renameIfExists(UploadedFile $file)
     {
-        if ($this->getStorage()->exists("{$this->getDirectory()}/$this->name")) {
+        if ($this->getStorage()->exists("{$this->getDirectory()}/$this->name") && ! config('admin.upload.override')) {
             $this->name = $this->generateUniqueName($file);
         }
     }
@@ -392,6 +392,10 @@ trait UploadField
     {
         if (! $paths || $this->retainable) {
             return;
+        }
+
+        if (method_exists($this, 'destroyThumbnail')) {
+            $this->destroyThumbnail($paths);
         }
 
         $storage = $this->getStorage();

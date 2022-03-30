@@ -47,7 +47,6 @@ class ComposerProperty implements Arrayable
     /**
      * @param  $key
      * @param  $val
-     *
      * @return $this
      */
     public function set($key, $val)
@@ -61,7 +60,6 @@ class ComposerProperty implements Arrayable
 
     /**
      * @param  $key
-     *
      * @return $this
      */
     public function delete($key)
@@ -75,7 +73,6 @@ class ComposerProperty implements Arrayable
 
     /**
      * @param  $name
-     *
      * @return mixed
      */
     public function __get($name)

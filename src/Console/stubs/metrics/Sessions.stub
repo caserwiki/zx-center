@@ -81,9 +81,10 @@ class Sessions extends Bar
     /**
      * 设置卡片内容.
      *
-     * @param  string $title
-     * @param  string $value
-     * @param  string $style
+     * @param string $title
+     * @param string $value
+     * @param string $style
+     *
      * @return $this
      */
     public function withContent($title, $value, $style = 'success')
